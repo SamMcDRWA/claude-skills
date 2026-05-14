@@ -1,0 +1,44 @@
+{
+  "skill_name": "review-loop",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "do a review pass on the project and fix whatever you find",
+      "expected_output": "Structured findings report with [SEVERITY: X] tags and file:line citations, followed by applied fixes and a self-review. Should orient first, group findings by category, fix CRITICAL/HIGH without asking, self-review all changes.",
+      "files": [],
+      "assertions": [
+        "process_log.md has an explicit Phase 0: Orient section listing files read before review started",
+        "self_review.md exists and contains per-fix regression analysis",
+        "findings.md contains at least 3 occurrences of '[SEVERITY:'",
+        "findings.md cites specific file paths with line numbers",
+        "findings.md groups findings under category headers (Security, Logic Bugs, etc.)",
+        "fixes.md describes at least one code change with a named file path"
+      ]
+    },
+    {
+      "id": 1,
+      "prompt": "run /review-loop on this codebase",
+      "expected_output": "Same structured workflow triggered by slash-command: orient, review with [SEVERITY: X] tags, fix in priority order, self-review.",
+      "files": [],
+      "assertions": [
+        "process_log.md documents an explicit orientation phase before review",
+        "self_review.md is non-empty with per-file regression checks",
+        "findings.md uses [SEVERITY: X] format for all findings",
+        "findings.md cites file paths with line numbers",
+        "fixes.md names specific files for each change"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "audit the codebase for security vulnerabilities and fix everything critical and high severity",
+      "expected_output": "Security-framed trigger that still follows the full review mandate. Finds real issues with file:line citations, fixes them, self-reviews. Uses [SEVERITY: X] format.",
+      "files": [],
+      "assertions": [
+        "self_review.md is non-empty even though user only asked for security audit",
+        "findings.md uses severity labels clearly (CRITICAL/HIGH/MEDIUM/LOW)",
+        "findings.md cites specific file paths",
+        "fixes.md names files for each fix applied"
+      ]
+    }
+  ]
+}

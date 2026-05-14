@@ -1,0 +1,7 @@
+{
+  "name": "review-loop",
+  "description": "Iterative code review skill that runs deep review passes (security, logic bugs, implementation gaps, second-order effects, loose ends), fixes findings in severity order, self-reviews the fixes for regressions, and repeats until the codebase is clean. Use when the user asks for a code review, security audit, bug hunt, or 'review and fix' pass.",
+  "author": {
+    "name": "samjmc"
+  }
+}
