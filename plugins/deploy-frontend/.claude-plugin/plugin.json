@@ -1,0 +1,12 @@
+{
+  "name": "deploy-frontend",
+  "version": "1.0.0",
+  "description": "Deploy the RWA Frontend and Chatbot API to Azure Container Apps via GitHub CI/CD. Push to develop → staging, merge develop → main → production. Manual Docker is emergency fallback only. Triggers on phrases like 'deploy', 'ship it', 'push to staging', 'push to prod', 'release', or 'promote develop to main'.",
+  "author": {
+    "name": "samjmc"
+  },
+  "repository": "https://github.com/SamMcDRWA/claude-skills",
+  "license": "MIT",
+  "keywords": ["deploy", "azure", "container-apps", "ci-cd", "github-actions"],
+  "skills": "./skills/"
+}
