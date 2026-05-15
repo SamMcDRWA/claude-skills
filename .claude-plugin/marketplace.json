@@ -17,7 +17,8 @@
         "source": "git-subdir",
         "url": "https://github.com/SamMcDRWA/claude-skills.git",
         "path": "plugins/review-loop",
-        "ref": "main"
+        "ref": "main",
+        "sha": "4c43a4c937fdd30ea5428e1f29a2032f5175b78d"
       }
     }
   ]
