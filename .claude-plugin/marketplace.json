@@ -20,6 +20,21 @@
         "ref": "main",
         "sha": "4c43a4c937fdd30ea5428e1f29a2032f5175b78d"
       }
+    },
+    {
+      "name": "deploy-frontend",
+      "description": "Deploy the RWA Frontend and Chatbot API to Azure Container Apps via GitHub CI/CD. Push to develop deploys staging, merge develop -> main deploys production. Manual Docker is emergency fallback only. Project-specific: assumes ACR rwatableauportalacr and resource group rg_rwatableauportal-prod.",
+      "author": {
+        "name": "samjmc"
+      },
+      "category": "deployment",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/SamMcDRWA/claude-skills.git",
+        "path": "plugins/deploy-frontend",
+        "ref": "main",
+        "sha": "6d1fb413db695d6a7117c67d31be9c30951cea8d"
+      }
     }
   ]
 }
